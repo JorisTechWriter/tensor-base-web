@@ -43,7 +43,7 @@
             <p>Select parameters to generate a photorealistic prompt.</p>
             
             <div class="input-group">
-                <label>Main Subject (What do you want to see?)</label>
+                <label>Main Subject</label>
                 <input type="text" id="subject" placeholder="e.g. A futuristic cyber-samurai" value="A futuristic cyber-samurai">
             </div>
             
@@ -75,6 +75,12 @@
         </div>
 
         <h3 class="articles-header">Knowledge Base</h3>
+        
+        <a href="chatgpt-excel-automation.html" class="article-link">
+            <strong>ChatGPT for Spreadsheet Automation</strong><br>
+            <span style="color: #94a3b8; font-size: 0.9rem;">Using AI for data management to save hours of manual work.</span>
+        </a>
+
         <a href="midjourney-architecture.html" class="article-link">
             <strong>How to Write Midjourney V6 Prompts for Architecture</strong><br>
             <span style="color: #94a3b8; font-size: 0.9rem;">Mastering AI for architectural visualization with core formulas.</span>
@@ -91,13 +97,9 @@
             const subject = document.getElementById('subject').value || 'A mystery object';
             const style = document.getElementById('style').value;
             const lighting = document.getElementById('lighting').value;
-            
             const finalPrompt = `${subject}, ${style}, ${lighting}, 8k resolution, photorealistic --v 6.0 --style raw`;
-            
             const resultBox = document.getElementById('result');
             resultBox.innerText = finalPrompt;
-            
-            // Визуальный отклик при клике
             resultBox.style.borderLeftColor = '#38bdf8';
             setTimeout(() => { resultBox.style.borderLeftColor = '#10b981'; }, 300);
         }
